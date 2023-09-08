@@ -1,6 +1,6 @@
 # Program 7
 ## Objective
-**Understanding Branching Statement if-else**
+**Understanding Decision Making Statement if-else**
 
 
 ## Software Requirements

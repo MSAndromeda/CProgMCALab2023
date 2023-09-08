@@ -1,6 +1,6 @@
 # Program 6
 ## Objective
-**Understanding Branching Statement if**
+**Understanding Decision Making Statement if**
 
 
 ## Software Requirements

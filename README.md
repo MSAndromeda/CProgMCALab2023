@@ -370,7 +370,7 @@ int main () {
 
 ## Objective
 
-**Understanding Branching Statement if**
+**Understanding Decision Making Statement if**
 
 ## Software Requirements
 
@@ -453,7 +453,7 @@ int main(){
 
 ## Objective
 
-**Understanding Branching Statement if-else**
+**Understanding Decision Making Statement if-else**
 
 ## Software Requirements
 
