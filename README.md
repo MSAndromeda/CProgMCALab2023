@@ -398,12 +398,18 @@ An if statement consists of a boolean expression followed by one or more stateme
 | ---------------: | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 |             `%d` | We can use the signed integer format specifier %d in the scanf() and print() functions or other functions that use formatted string for input and output of int data type. |
 
-### Assignment Operator Used
+### Relational Operator Used
 
 | Operator | Description                                                                                                           |
 | -------: | --------------------------------------------------------------------------------------------------------------------- |
 |      `<` | Checks if the value of left operand is less than the value of right operand. If yes, then the condition becomes true. |
+
+### Misc Operator Used
+
+| Operator | Description                                                                                                           |
+| -------: | --------------------------------------------------------------------------------------------------------------------- |
 |      `&` | Returns the address of a variable.                                                                                    |
+
 
 ## Code
 
