@@ -73,5 +73,5 @@ int main()
 ```
 
 ## Output
-![Understanding Variables Program Output Tutorialspoint](./ifelse_Program_output1.png)
-![Understanding Variables Program Output LetusC](./ifelse_Program_output2.png)
+![Understanding if-else Program Output Tutorialspoint](./ifelse_Program_output1.png)
+![Understanding if-else Program Output LetusC](./ifelse_Program_output2.png)

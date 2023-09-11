@@ -71,5 +71,5 @@ int main(){
 ```
 
 ## Output
-![Understanding Variables Program Output Tutorialspoint](./OnlyifProgram_output1.png)
-![Understanding Variables Program Output LetusC](./OnlyifProgram_output2.png)
+![Understanding if Program Output Tutorialspoint](./OnlyifProgram_output1.png)
+![Understanding if Program Output LetusC](./OnlyifProgram_output2.png)
