@@ -1,4 +1,4 @@
-# Program 8
+# Program 9
 ## Objective
 **Understanding while Loop in C**
 
@@ -70,4 +70,4 @@ int main( )
 ```
 
 ## Output
-![Understanding Nested-if Program Output](./Prog9_Outpur.png)
+![Understanding while Program Output](./Prog9_Outpur.png)
