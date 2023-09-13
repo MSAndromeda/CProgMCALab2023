@@ -745,4 +745,4 @@ int main()
 ```
 
 ## Output
-![Understanding do...while Program Output](./Prog10_Outpur.png)
+![Understanding do...while Program Output](./ProgramFile/10_Program/Prog10_Outpur.png)
