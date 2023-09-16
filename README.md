@@ -16,11 +16,11 @@ Manas Anand Singh (Andro) 😊
 
 ## Objective
 
-**To Print Hello World to The Screen**
+**Write a program to Print Hello World using C Language**
 
 ## Software Requirements
 
-**`Windows 11, Github Codespaces, Chrome(or other browser for using CodeSpaces)`**
+**`Windows 11, VS Code`**
 
 ## Theory
 
@@ -47,11 +47,13 @@ The next line **`return 0;`** terminates the main() function and returns the val
 ## Code
 
 ```c
+// Hello World Program in C language
+
 #include <stdio.h>
 
 int main(void){
-    // First Program of my Practical File
     printf("Hello World!\n");
+    // \n -> Inserts a newline in the text at this point.
     return 0;
 }
 ```
@@ -64,14 +66,102 @@ int main(void){
 
 ## Objective
 
-**To Calculate Simple Interest of A Investment**
+**Write a program to Calculate Simple Interest of A Investment in C Language**
 
 ## Software Requirements
 
-**`Windows 11, Github Codespaces, Chrome(or other browser for using CodeSpaces)`**
+**`Windows 11, VS Code`**
 
 ## Theory
 
+### C-Variables
+A variable is nothing but a name given to a storage area that our programs can manipulate.
+
+### Variable Definition in C
+- Syntax : 
+```
+type variable_list;
+```
+
+- Examples:
+```c
+int    i, j, k;
+char   c, ch;
+float  f, salary;
+double d;
+```
+
+### Variable Declaration with Initialization
+- Syntax : 
+```
+type variable_name = value;
+```
+
+- Examples:
+```c
+extern int d = 3, f = 5;    // declaration of d and f. 
+int d = 3, f = 5;           // definition and initializing d and f. 
+byte z = 22;                // definition and initializes z. 
+char x = 'x';               // the variable x has the value 'x'.
+```
+
+### Extern
+You will use the keyword extern to declare a variable at any place.
+- Example:
+```c
+// Variable declaration:
+extern int a, b;
+extern int c;
+extern float f;
+```
+
+## Code
+
+```c
+#include<stdio.h>
+
+// Variable declaration:
+   extern int p, n ;
+   extern float r, si ;
+
+int main( )
+{
+   // Variable definition:
+    int p, n ;
+    float r, si ;
+
+   // actual initialization
+    p = 1000 ;
+    n = 3 ;
+    r = 8.5 ;
+
+    /* formula for simple interest */
+    si = p * n * r / 100 ;
+    
+    printf ( "Simple Interest = %f\n" , si ) ;
+    /*%f -> The %f can be used inside the formatted
+    string for input and output of float data type.*/
+
+    return 0;
+}
+```
+
+## Output
+
+![Simple Interest Program Output](./ProgramFile/2_Program/SimpleInterest_Output.png)
+
+
+# 💻 Program 3
+
+## Objective
+
+**Write a program to demostrate working of different Operators in C Language**
+
+## Software Requirements
+
+**`Windows 11, VS Code`**
+
+## Theory
 
 ### C-Operators
 An operator is a symbol that tells the compiler to perform specific mathematical or logical functions. C language is rich in built-in operators and provides the following types of operators −
@@ -82,7 +172,7 @@ An operator is a symbol that tells the compiler to perform specific mathematical
 - Assignment Operators
 - Misc Operators
 
-### Arithmatic Operators
+#### Arithmatic Operators
 The following table shows all the arithmetic operators supported by the C language. Assume variable A holds 10 and variable B holds 20 then −
 
 | Operator | Description                                                  | Example     |
@@ -91,11 +181,11 @@ The following table shows all the arithmetic operators supported by the C langua
 |      `-` | Subtracts second operand from the first.                     | A − B = -10 |
 |      `*` | Multiplies both operands.                                    | A * B = 200 |
 |      `/` | Divides numerator by de-numerator.                           | B / A = 2   |
-|      `%` | Modulus Operator and remainder of after an integer division. | B % A = 0   |
-|      `++`| Increment operator increases the integer value by one.       | A++ = 11    |
-|      `--`| Decrement operator decreases the integer value by one.       | A++ = 11    |
+|      `%` | Gives remainder after an integer division.                   | B % A = 0   |
+|      `++`| Increases the integer value by one.                          | A++ = 11    |
+|      `--`| Decreases the integer value by one.                          | A++ = 11    |
 
-### Relational Operators
+#### Relational Operators
 The following table shows all the relational operators supported by C. Assume variable A holds 10 and variable B holds 20 then −
 
 | Operator | Description                                                  | Example    |
@@ -107,7 +197,7 @@ The following table shows all the relational operators supported by C. Assume va
 |      `>=` | Checks if the value of left operand is greater than or equal to the value of right operand. If yes, then the condition becomes true. | (A >= B) is not true. |
 |      `<=`| Checks if the value of left operand is less than or equal to the value of right operand. If yes, then the condition becomes true. | (A <= B) is true. |
 
-### Logical Operators
+#### Logical Operators
 The following table shows all the arithmetic operators supported by the C language. Assume variable A holds 10 and variable B holds 20 then −
 
 | Operator | Description                                                  | Example    |
@@ -116,10 +206,10 @@ The following table shows all the arithmetic operators supported by the C langua
 |      `\|\|` | Called Logical OR Operator. If any of the two operands is non-zero, then the condition becomes true. | (A \|\| B) is true. |
 |      `!` | Called Logical NOT Operator. It is used to reverse the logical state of its operand. If a condition is true, then Logical NOT operator will make it false. | !(A && B) is true. |
 
-### Bitwise Operators
+#### Bitwise Operators
 Bitwise operator works on bits and perform bit-by-bit operation. The truth tables for &, |, and ^ is as follows −
 |  p  |  q  |p & q| p \| q | p ^ q  |
-| :-: | :-: | :-: | :----: | :---:  |
+| :-: | :-: | :-: | :----: | :----: |
 | 0   |  0  |  0  |    0   |    0   |
 | 0   |  1  |  0  |    1   |    1   |
 | 1   |  1  |  1  |    1   |    0   |
@@ -137,7 +227,7 @@ The following table lists the bitwise operators supported by C. Assume variable 
 |      `>>` | Binary Right Shift Operator. The left operands value is moved right by the number of bits specified by the right operand. | A >> 2 = 15 i.e., 0000 1111 |
 
 
-### Assignment Operators
+#### Assignment Operators
 
 | Operator | Description                                                                              | Example     |
 | -------: | ---------------------------------------------------------------------------------------- | ----------- |
@@ -153,7 +243,7 @@ The following table lists the bitwise operators supported by C. Assume variable 
 |      `^=` | Bitwise exclusive OR and assignment operator. | C ^= 2 is same as C = C ^ 2 |
 |      `\|=` | Bitwise inclusive OR and assignment operator. | C \|= 2 is same as C = C \| 2 |
 
-### Misc Operators ↦ sizeof & ternary
+#### Misc Operators ↦ sizeof & ternary
 Besides the operators discussed above, there are a few other important operators including sizeof and ? : supported by the C Language.
 
 | Operator   | Description                                     | Example                                                      |
@@ -164,54 +254,18 @@ Besides the operators discussed above, there are a few other important operators
 |      `?:`  | Pointer to a variable.                          | If Condition is true ? then value X : otherwise value Y      |
 
 
-### Datatypes Used
-
-|  Datatype | Description |
-| --------: | ----------- |
-| `Integer` | The integer datatype in C is used to store the whole numbers without decimal values. Octal values, hexadecimal values, and decimal values can be stored in int data type in C. |
-|   `Float` | In C programming float data type is used to store floating-point values. Float in C is used to store decimal and exponential values. It is used to store decimal numbers (numbers with floating point values) with single precision. |
-
-### Format Specifier Used
-
-| Operator | Description   |
-| -------: | ------------- |
-|     `%f` | The %f is the floating point format specifier in C language that can be used inside the formatted string for input and output of float data type. Apart from %f, we can use %e or %E format specifiers to print the floating point value in the exponential form. |
-
-### Escape Sequence Used
-
-| Escape Sequence | Description                                  |
-| --------------: | -------------------------------------------- |
-|            `\n` | Inserts a newline in the text at this point. |
-
-
 ## Code
 
 ```c
-#include<stdio.h>
 
-int main( )
-{
-
-    int p, n ;
-    float r, si ;
-
-    p = 1000 ;
-    n = 3 ;
-    r = 8.5 ;
-
-    /* formula for simple interest */
-    si = p * n * r / 100 ;
-    printf ( "Simple Interest = %f\n" , si ) ;
-
-    return 0;
-}
 ```
 
 ## Output
 
 ![Simple Interest Program Output](./ProgramFile/2_Program/SimpleInterest_Output.png)
 
-# 💻 Program 3
+
+# 💻 Program 4
 
 ## Objective
 
@@ -219,7 +273,7 @@ int main( )
 
 ## Software Requirements
 
-**`Windows 11, Github Codespaces, Chrome(or other browser for using CodeSpaces)`**
+**`Windows 11, VS Code`**
 
 ## Theory
 
@@ -231,37 +285,34 @@ int main( )
 
 - `#include <float.h>`: This line includes a library containing constants for floating-point data types' limits.
 
-### Integer Limits
+### Datatypes in C
+![Datatypes in C Chart from GFG](./DatatypesInC.jpg)
 
-- `printf("CHAR_BIT : %d\n", CHAR_BIT);`: Prints the number of bits in a char data type.
+#### Primitive Datatypes
+- Primitive data types are the most basic data types that are used for representing simple values such as integers, float, characters, etc.
 
-- `printf("CHAR_MAX : %d\n", CHAR_MAX);`: Prints the maximum value a char can hold.
+|  Datatype | Description |
+| --------: | ----------- |
+| `Integer` | The integer datatype in C is used to store the whole numbers without decimal values. Octal values, hexadecimal values, and decimal values can be stored in int data type in C. |
+| `Character` | Character data type allows its variable to store only a single character. The size of the character is 1 byte. It is the most basic data type in C. It stores a single character and requires a single byte of memory in almost all compilers. |
+|   `Floating Point` | In C programming float data type is used to store floating-point values. Float in C is used to store decimal and exponential values. It is used to store decimal numbers (numbers with floating point values) with single precision. |
+| `Double Floating Point` | A Double data type in C is used to store decimal numbers (numbers with floating point values) with double precision. It is used to define numeric values which hold numbers with decimal values in C. |
+| `Void` | The void data type in C is used to specify that no value is present. It does not provide a result value to its caller. It has no values and no operations. It is used to represent nothing. Void is used in multiple ways as function return type, function arguments as void, and pointers to void. |
 
-- `printf("CHAR_MIN : %d\n", CHAR_MIN);`: Prints the minimum value a char can hold.
+##### Integer Types
+The following table provides the details of standard integer types with their storage sizes and value ranges −
 
-- `printf("INT_MAX : %d\n", INT_MAX);`: Prints the maximum value an int can hold.
-
-- `printf("INT_MIN : %d\n", INT_MIN);`: Prints the minimum value an int can hold.
-
-- `printf("LONG_MAX : %ld\n", (long) LONG_MAX);`: Prints the maximum value a long can hold.
-
-- `printf("LONG_MIN : %ld\n", (long) LONG_MIN);`: Prints the minimum value a long can hold.
-
-- `printf("SCHAR_MAX : %d\n", SCHAR_MAX);`: Prints the maximum value a signed char can hold.
-
-- `printf("SCHAR_MIN : %d\n", SCHAR_MIN);`: Prints the minimum value a signed char can hold.
-
-- `printf("SHRT_MAX : %d\n", SHRT_MAX);`: Prints the maximum value a short can hold.
-
-- `printf("SHRT_MIN : %d\n", SHRT_MIN);`: Prints the minimum value a short can hold.
-
-- `printf("UCHAR_MAX : %d\n", UCHAR_MAX);`: Prints the maximum value an unsigned char can hold.
-
-- `printf("UINT_MAX : %u\n", (unsigned int) UINT_MAX);`: Prints the maximum value an unsigned int can hold.
-
-- `printf("ULONG_MAX : %lu\n", (unsigned long) ULONG_MAX);`: Prints the maximum value an unsigned long can hold.
-
-- `printf("USHRT_MAX : %d\n", (unsigned short) USHRT_MAX);`: Prints the maximum value an unsigned short can hold.
+|Type	|Storage size|	Value range|
+|----:|------------|------------|
+|`char`	|1 byte	|-128 to 127 or 0 to 255|
+|`unsigned char`|	1 byte|	0 to 255|
+|`signed char`|	1 byte|	-128 to 127|
+|`int`	|2 or 4 bytes	|-32,768 to 32,767 or -2,147,483,648 to 2,147,483,647|
+|`unsigned int`|	2 or 4 bytes	|0 to 65,535 or 0 to 4,294,967,295|
+|`short`|	2 bytes	|-32,768 to 32,767|
+|`unsigned short`|	2 bytes	|0 to 65,535|
+|`long`	|8 bytes or (4bytes for 32 bit OS)|	-9223372036854775808 to 9223372036854775807|
+|`unsigned long`	|8 bytes	|0 to 18446744073709551615|
 
 ## Code
 
@@ -297,7 +348,7 @@ int main() {
 
 ![Datatypes Program Output](./ProgramFile/3_Program/Datatypes_Output.png)
 
-# 💻 Program 4
+# 💻 Program 5
 
 ## Objective
 
@@ -305,7 +356,7 @@ int main() {
 
 ## Software Requirements
 
-**`Windows 11, Github Codespaces, Chrome(or other browser for using CodeSpaces)`**
+**`Windows 11, VS Code`**
 
 ## Theory
 
@@ -363,7 +414,7 @@ int main() {
 
 ![Floating Point Datatypes Program Output](./ProgramFile/4_Program/FloatingPointDatatypes_Output.png)
 
-# 💻 Program 5
+# 💻 Program 6
 
 ## Objective
 
@@ -371,7 +422,7 @@ int main() {
 
 ## Software Requirements
 
-**`Windows 11, Github Codespaces, Chrome(or other browser for using CodeSpaces)`**
+**`Windows 11, VS Code`**
 
 ## Theory
 
@@ -446,7 +497,7 @@ int main () {
 
 ![Understanding Variables Program Output](./ProgramFile/5_Program/UnderstandingVariables_Output.png)
 
-# 💻 Program 6
+# 💻 Program 7
 
 ## Objective
 
@@ -454,7 +505,7 @@ int main () {
 
 ## Software Requirements
 
-**`Windows 11, Github Codespaces, Chrome(or other browser for using CodeSpaces)`**
+**`Windows 11, VS Code`**
 
 ## Theory
 
@@ -535,7 +586,7 @@ int main(){
 ![Understanding if Program Output Tutorialspoint](./ProgramFile/6_Program/OnlyifProgram_output1.png)
 ![Understanding if Program Output LetusC](./ProgramFile/6_Program/OnlyifProgram_output2.png)
 
-# 💻 Program 7
+# 💻 Program 8
 
 ## Objective
 
@@ -543,7 +594,7 @@ int main(){
 
 ## Software Requirements
 
-**`Windows 11, Github Codespaces, Chrome(or other browser for using CodeSpaces)`**
+**`Windows 11, VS Code`**
 
 ## Theory
 
@@ -617,13 +668,13 @@ int main()
 ![Understanding if-else Program Output Tutorialspoint](./ProgramFile/7_Program/ifelse_Program_output2.png)
 ![Understanding if-else Program Output LetusC](./ProgramFile/7_Program/ifelse_Program_output1.png)
 
-# Program 8
+# Program 9
 ## Objective
 **Understanding Decision Statement nested if**
 
 
 ## Software Requirements
-**`Windows 11, Github Codespaces, Chrome(or other browser for using CodeSpaces)`**
+**`Windows 11, VS Code`**
 
 
 ## Theory
@@ -701,13 +752,13 @@ int main( )
 ## Output
 ![Understanding Nested-if Program Output](./ProgramFile/8_Program/Prog8_Outpur.png)
 
-# Program 9
+# Program 10
 ## Objective
 **Understanding while Loop in C**
 
 
 ## Software Requirements
-**`Windows 11, Github Codespaces, Chrome(or other browser for using CodeSpaces)`**
+**`Windows 11, VS Code`**
 
 
 ## Theory
@@ -775,13 +826,13 @@ int main( )
 ## Output
 ![Understanding while Program Output](./ProgramFile/9_Program/Prog9_Outpur.png)
 
-# Program 10
+# Program 11
 ## Objective
 **Understanding do...while Loop in C**
 
 
 ## Software Requirements
-**`Windows 11, Github Codespaces, Chrome(or other browser for using CodeSpaces)`**
+**`Windows 11, VS Code`**
 
 
 ## Theory
