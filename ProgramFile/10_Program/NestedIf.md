@@ -1,13 +1,13 @@
-# Program 8
+
+# 💻 Program 10
+
 ## Objective
-**Understanding Decision Statement nested if**
-
-
-## Software Requirements
-**`Windows 11, Github Codespaces, Chrome(or other browser for using CodeSpaces)`**
-
+**Write a program to demostrate working of nested if statement in C Programming**
 
 ## Theory
+
+### nested if Statement:
+You can use one if or else if statement inside another if or else if statement(s).
 
 ### nested if Statement Syntax
 ```
@@ -19,15 +19,6 @@ if( boolean_expression 1) {
    }
 }
 ```
-
-### nested if Statement:
-You can use one if or else if statement inside another if or else if statement(s).
-
-### Relational Operator Used
-
-| Operator | Description                                                                              |
-| -------: | ---------------------------------------------------------------------------------------- |
-|     `==` | Checks if the values of two operands are equal or not. If yes, then the condition becomes true. |
 
 ## Code
 ```c
@@ -75,8 +66,6 @@ int main( )
     } 
     return 0;
 } 
-
-
 ```
 
 ## Output

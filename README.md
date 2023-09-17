@@ -53,7 +53,7 @@ The next line **`return 0;`** terminates the main() function and returns the val
 
 int main(void){
     printf("Hello World!\n");
-    // \n -> Inserts a newline in the text at this point.
+    // \n -> Inserts a newline.
     return 0;
 }
 ```
@@ -68,69 +68,33 @@ int main(void){
 
 **Write a program to Calculate Simple Interest of A Investment in C Language**
 
-## Software Requirements
-
-**`Windows 11, VS Code`**
-
 ## Theory
 
-### C-Variables
-A variable is nothing but a name given to a storage area that our programs can manipulate.
+### Datatypes in C
+![Datatypes in C Chart from GFG](./DatatypesInC.jpg)
 
-### Variable Definition in C
-- Syntax : 
-```
-type variable_list;
-```
+#### Primitive Datatypes
+- Primitive data types are the most basic data types that are used for representing simple values such as integers, float, characters, etc.
 
-- Examples:
-```c
-int    i, j, k;
-char   c, ch;
-float  f, salary;
-double d;
-```
+|  Datatype                | Description                                                                                        |
+| --------:                | -----------------------------------------------                                                    |
+| `Integer`                | Stores whole numbers, including octal and hexadecimal.                                             |
+| `Character`              | Holds a single character, requires 1 byte.                                                         |
+| `Floating Point`         | Stores decimal and exponential values with single precision.                                       |
+| `Double Floating Point`  | Stores decimal numbers with double precision.                                                      |
+| `Void`                   | Represents absence of a value; used in various ways, including function return types and pointers. |
 
-### Variable Declaration with Initialization
-- Syntax : 
-```
-type variable_name = value;
-```
-
-- Examples:
-```c
-extern int d = 3, f = 5;    // declaration of d and f. 
-int d = 3, f = 5;           // definition and initializing d and f. 
-byte z = 22;                // definition and initializes z. 
-char x = 'x';               // the variable x has the value 'x'.
-```
-
-### Extern
-You will use the keyword extern to declare a variable at any place.
-- Example:
-```c
-// Variable declaration:
-extern int a, b;
-extern int c;
-extern float f;
-```
 
 ## Code
 
 ```c
 #include<stdio.h>
 
-// Variable declaration:
-   extern int p, n ;
-   extern float r, si ;
-
 int main( )
 {
-   // Variable definition:
     int p, n ;
     float r, si ;
 
-   // actual initialization
     p = 1000 ;
     n = 3 ;
     r = 8.5 ;
@@ -139,8 +103,7 @@ int main( )
     si = p * n * r / 100 ;
     
     printf ( "Simple Interest = %f\n" , si ) ;
-    /*%f -> The %f can be used inside the formatted
-    string for input and output of float data type.*/
+   /* %f for float data type in formatted strings. */
 
     return 0;
 }
@@ -155,125 +118,7 @@ int main( )
 
 ## Objective
 
-**Write a program to demostrate working of different Operators in C Language**
-
-## Software Requirements
-
-**`Windows 11, VS Code`**
-
-## Theory
-
-### C-Operators
-An operator is a symbol that tells the compiler to perform specific mathematical or logical functions. C language is rich in built-in operators and provides the following types of operators −
-- Arithmetic Operators
-- Relational Operators
-- Logical Operators
-- Bitwise Operators
-- Assignment Operators
-- Misc Operators
-
-#### Arithmatic Operators
-The following table shows all the arithmetic operators supported by the C language. Assume variable A holds 10 and variable B holds 20 then −
-
-| Operator | Description                                                  | Example     |
-| -------: | ------------------------------------------------------------ | ----------- |
-|      `+` | Adds two operands.                                           | A + B = 30  |
-|      `-` | Subtracts second operand from the first.                     | A − B = -10 |
-|      `*` | Multiplies both operands.                                    | A * B = 200 |
-|      `/` | Divides numerator by de-numerator.                           | B / A = 2   |
-|      `%` | Gives remainder after an integer division.                   | B % A = 0   |
-|      `++`| Increases the integer value by one.                          | A++ = 11    |
-|      `--`| Decreases the integer value by one.                          | A++ = 11    |
-
-#### Relational Operators
-The following table shows all the relational operators supported by C. Assume variable A holds 10 and variable B holds 20 then −
-
-| Operator | Description                                                  | Example    |
-| -------: | ------------------------------------------------------------ | ---------- |
-|      `==` | Checks if the values of two operands are equal or not. If yes, then the condition becomes true. | (A == B) is not true. |
-|      `!=` | Checks if the values of two operands are equal or not. If the values are not equal, then the condition becomes true. | (A != B) is true. |
-|      `>` | Checks if the value of left operand is greater than the value of right operand. If yes, then the condition becomes true. | (A > B) is not true. |
-|      `<` | Checks if the value of left operand is less than the value of right operand. If yes, then the condition becomes true. | (A < B) is true.   |
-|      `>=` | Checks if the value of left operand is greater than or equal to the value of right operand. If yes, then the condition becomes true. | (A >= B) is not true. |
-|      `<=`| Checks if the value of left operand is less than or equal to the value of right operand. If yes, then the condition becomes true. | (A <= B) is true. |
-
-#### Logical Operators
-The following table shows all the arithmetic operators supported by the C language. Assume variable A holds 10 and variable B holds 20 then −
-
-| Operator | Description                                                  | Example    |
-| -------: | ------------------------------------------------------------ | ---------- |
-|      `&&` | Called Logical AND operator. If both the operands are non-zero, then the condition becomes true. | (A && B) is false. |
-|      `\|\|` | Called Logical OR Operator. If any of the two operands is non-zero, then the condition becomes true. | (A \|\| B) is true. |
-|      `!` | Called Logical NOT Operator. It is used to reverse the logical state of its operand. If a condition is true, then Logical NOT operator will make it false. | !(A && B) is true. |
-
-#### Bitwise Operators
-Bitwise operator works on bits and perform bit-by-bit operation. The truth tables for &, |, and ^ is as follows −
-|  p  |  q  |p & q| p \| q | p ^ q  |
-| :-: | :-: | :-: | :----: | :----: |
-| 0   |  0  |  0  |    0   |    0   |
-| 0   |  1  |  0  |    1   |    1   |
-| 1   |  1  |  1  |    1   |    0   |
-| 1   |  0  |  0  |    1   |    1   |
-
-The following table lists the bitwise operators supported by C. Assume variable 'A' holds 60 and variable 'B' holds 13, then −
-
-| Operator | Description                                                  | Example     |
-| -------: | ------------------------------------------------------------ | ----------- |
-|      `&` | Binary AND Operator copies a bit to the result if it exists in both operands. | (A & B) = 12, i.e., 0000 1100  |
-|      `\|` | Binary OR Operator copies a bit if it exists in either operand. | (A \| B) = 61, i.e., 0011 1101 |
-|      `^` | Binary XOR Operator copies the bit if it is set in one operand but not both. | (A ^ B) = 49, i.e., 0011 0001 |
-|      `~` | Binary One's Complement Operator is unary and has the effect of 'flipping' bits. | (~A ) = ~(60), i.e,. -0111101 |
-|      `<<` | Binary Left Shift Operator. The left operands value is moved left by the number of bits specified by the right operand. | A << 2 = 240 i.e., 1111 0000 |
-|      `>>` | Binary Right Shift Operator. The left operands value is moved right by the number of bits specified by the right operand. | A >> 2 = 15 i.e., 0000 1111 |
-
-
-#### Assignment Operators
-
-| Operator | Description                                                                              | Example     |
-| -------: | ---------------------------------------------------------------------------------------- | ----------- |
-|      `=` | Simple assignment operator. Assigns values from right side operands to left side operand | C = A + B will assign the value of A + B to C |
-|      `+=` | Add AND assignment operator. It adds the right operand to the left operand and assign the result to the left operand. | C += A is equivalent to C = C + A |
-|      `-=` | Subtract AND assignment operator. It subtracts the right operand from the left operand and assigns the result to the left operand. | C -= A is equivalent to C = C - A |
-|      `*=` | Multiply AND assignment operator. It multiplies the right operand with the left operand and assigns the result to the left operand. | C *= A is equivalent to C = C * A |
-|      `/=` | Divide AND assignment operator. It divides the left operand with the right operand and assigns the result to the left operand. | C /= A is equivalent to C = C / A |
-|      `%=` | Modulus AND assignment operator. It takes modulus using two operands and assigns the result to the left operand. | C %= A is equivalent to C = C % A |
-|      `<<=` | Left shift AND assignment operator. | C <<= 2 is same as C = C << 2 |
-|      `>>=` | Right shift AND assignment operator. | C >>= 2 is same as C = C >> 2 |
-|      `&=` | Bitwise AND assignment operator. | C >>= 2 is same as C = C >> 2 |
-|      `^=` | Bitwise exclusive OR and assignment operator. | C ^= 2 is same as C = C ^ 2 |
-|      `\|=` | Bitwise inclusive OR and assignment operator. | C \|= 2 is same as C = C \| 2 |
-
-#### Misc Operators ↦ sizeof & ternary
-Besides the operators discussed above, there are a few other important operators including sizeof and ? : supported by the C Language.
-
-| Operator   | Description                                     | Example                                                      |
-| ---------: | ----------------------------------------------- | ------------------------------------------------------------ |
-| `sizeof()` | Returns the size of a variable.                 | sizeof(a), where a is integer, will return 4.                |
-|      `&`   | Returns the address of a variable.              | &a; returns the actual address of the variable.              |
-|      `*`   | Pointer to a variable.                          | *a; returns the value at the address stored in the variable. |
-|      `?:`  | Pointer to a variable.                          | If Condition is true ? then value X : otherwise value Y      |
-
-
-## Code
-
-```c
-
-```
-
-## Output
-
-![Simple Interest Program Output](./ProgramFile/2_Program/SimpleInterest_Output.png)
-
-
-# 💻 Program 4
-
-## Objective
-
-**Understanding Datatypes**
-
-## Software Requirements
-
-**`Windows 11, VS Code`**
+**Write a program to provides the details of standard integer types in C Language**
 
 ## Theory
 
@@ -285,21 +130,8 @@ Besides the operators discussed above, there are a few other important operators
 
 - `#include <float.h>`: This line includes a library containing constants for floating-point data types' limits.
 
-### Datatypes in C
-![Datatypes in C Chart from GFG](./DatatypesInC.jpg)
 
-#### Primitive Datatypes
-- Primitive data types are the most basic data types that are used for representing simple values such as integers, float, characters, etc.
-
-|  Datatype | Description |
-| --------: | ----------- |
-| `Integer` | The integer datatype in C is used to store the whole numbers without decimal values. Octal values, hexadecimal values, and decimal values can be stored in int data type in C. |
-| `Character` | Character data type allows its variable to store only a single character. The size of the character is 1 byte. It is the most basic data type in C. It stores a single character and requires a single byte of memory in almost all compilers. |
-|   `Floating Point` | In C programming float data type is used to store floating-point values. Float in C is used to store decimal and exponential values. It is used to store decimal numbers (numbers with floating point values) with single precision. |
-| `Double Floating Point` | A Double data type in C is used to store decimal numbers (numbers with floating point values) with double precision. It is used to define numeric values which hold numbers with decimal values in C. |
-| `Void` | The void data type in C is used to specify that no value is present. It does not provide a result value to its caller. It has no values and no operations. It is used to represent nothing. Void is used in multiple ways as function return type, function arguments as void, and pointers to void. |
-
-##### Integer Types
+### Integer Types
 The following table provides the details of standard integer types with their storage sizes and value ranges −
 
 |Type	|Storage size|	Value range|
@@ -325,11 +157,13 @@ The following table provides the details of standard integer types with their st
 int main() {
 
     printf("CHAR_BIT    :   %d\n", CHAR_BIT);
+    // %d for integer data type in formatted strings.
     printf("CHAR_MAX    :   %d\n", CHAR_MAX);
     printf("CHAR_MIN    :   %d\n", CHAR_MIN);
     printf("INT_MAX     :   %d\n", INT_MAX);
     printf("INT_MIN     :   %d\n", INT_MIN);
     printf("LONG_MAX    :   %ld\n", (long) LONG_MAX);
+    // %ld for long integer data type in formatted strings.
     printf("LONG_MIN    :   %ld\n", (long) LONG_MIN);
     printf("SCHAR_MAX   :   %d\n", SCHAR_MAX);
     printf("SCHAR_MIN   :   %d\n", SCHAR_MIN);
@@ -337,7 +171,9 @@ int main() {
     printf("SHRT_MIN    :   %d\n", SHRT_MIN);
     printf("UCHAR_MAX   :   %d\n", UCHAR_MAX);
     printf("UINT_MAX    :   %u\n", (unsigned int) UINT_MAX);
+    // %u for unsigned integer data type in formatted strings.
     printf("ULONG_MAX   :   %lu\n", (unsigned long) ULONG_MAX);
+    // %lu for unsigned long integer data type in formatted strings.
     printf("USHRT_MAX   :   %d\n", (unsigned short) USHRT_MAX);
 
     return 0;
@@ -348,43 +184,22 @@ int main() {
 
 ![Datatypes Program Output](./ProgramFile/3_Program/Datatypes_Output.png)
 
-# 💻 Program 5
+# 💻 Program 4
 
 ## Objective
 
-**Understanding Floating Point Datatypes**
-
-## Software Requirements
-
-**`Windows 11, VS Code`**
+**Write a program to provides the details of standard floating-point types in C Language**
 
 ## Theory
 
-### Storage Size
+### Floating-Point Types
+The following table provide the details of standard floating-point types -
+|   Type       | Storage size |       Value range         | Precision         |
+| :----------- | :----------: | :-----------------------: | :----------------: |
+| float        |    4 bytes   | 1.2E-38 to 3.4E+38       | 6 decimal places   |
+| double       |    8 bytes   | 2.3E-308 to 1.7E+308     | 15 decimal places  |
+| long double  |   10 bytes   | 3.4E-4932 to 1.1E+4932   | 19 decimal places  |
 
-- `sizeof(Data_Type)`: Calculates the storage space in bytes of provided datatype.
-
-### Floating-Point Limits
-
-The following `printf` statements provide information about the limits of floating-point data types:
-
-- `FLT_MAX`: Prints the maximum positive finite value representable by a `float`.
-
-- `FLT_MIN`: Prints the minimum positive finite value representable by a `float`.
-
-- `-FLT_MAX`: Prints the maximum negative finite value representable by a `float`.
-
-- `-FLT_MIN`: Prints the minimum negative finite value representable by a `float`.
-
-- `DBL_MAX`: Prints the maximum positive finite value representable by a `double`.
-
-- `DBL_MIN`: Prints the minimum positive finite value representable by a `double`.
-
-- `-DBL_MAX`: Prints the maximum negative finite value representable by a `double`.
-
-### Precision
-
-- `printf("Precision value: %d\n", FLT_DIG);`: Prints the number of decimal digits of precision for the `float` data type.
 
 ## Code
 
@@ -397,14 +212,19 @@ The following `printf` statements provide information about the limits of floati
 int main() {
 
     printf("Storage size for float : %lu \n", sizeof(float));
-    printf("FLT_MAX     :   %g\n", (float) FLT_MAX);
-    printf("FLT_MIN     :   %g\n", (float) FLT_MIN);
-    printf("-FLT_MAX    :   %g\n", (float) -FLT_MAX);
-    printf("-FLT_MIN    :   %g\n", (float) -FLT_MIN);
-    printf("DBL_MAX     :   %g\n", (double) DBL_MAX);
-    printf("DBL_MIN     :   %g\n", (double) DBL_MIN);
-    printf("-DBL_MAX     :  %g\n", (double) -DBL_MAX);
-    printf("Precision value: %d\n", FLT_DIG );
+    // sizeof(Data_Type): Calculates the storage space in bytes of the provided data type.
+
+    printf("FLT_MAX: %g\n", (float) FLT_MAX);
+    // %g: Format specifier for a general floating-point number.
+    printf("FLT_MIN: %g\n", (float) FLT_MIN);
+    printf("-FLT_MAX: %g\n", (float) -FLT_MAX);
+    printf("-FLT_MIN: %g\n", (float) -FLT_MIN);
+    printf("Double Max: %g\n", (double) DBL_MAX);
+    printf("Double Min: %g\n", (double) DBL_MIN);
+    printf("-Double Max: %g\n", (double) -DBL_MAX);
+
+    printf("Float Precision: %d decimal places\n", FLT_DIG);
+    // Decimal digits of precision for float.
 
     return 0;
 }
@@ -414,53 +234,40 @@ int main() {
 
 ![Floating Point Datatypes Program Output](./ProgramFile/4_Program/FloatingPointDatatypes_Output.png)
 
-# 💻 Program 6
+# 💻 Program 5
 
 ## Objective
 
-**Understanding Variables**
-
-## Software Requirements
-
-**`Windows 11, VS Code`**
+**Write a Program to demostrate the working of Variables in C Language**
 
 ## Theory
 
-### Variable Declarations
+### C-Variables
+A variable is nothing but a name given to a storage area that our programs can manipulate.
 
-- `extern int a, b;`: This declares global variables `a` and `b` of type `int` which are defined later in the code.
+### Variable Definition in C
+- Syntax : 
+```
+type variable_list;
+```
 
-- `extern int c;`: This declares a global variable `c` of type `int` which is also defined later in the code.
+- Examples:
+```c
+float  f, salary;
+double d;
+```
 
-- `extern float f;`: This declares a global variable `f` of type `float` which is also defined later in the code.
+### Variable Declaration with Initialization
+- Syntax : 
+```
+type variable_name = value;
+```
 
-### Local Variable Definitions
-
-Within the `main` function, local variables are defined:
-
-- `int a, b;`: Declares local variables `a` and `b` of type `int`.
-
-- `int c;`: Declares a local variable `c` of type `int`.
-
-- `float f;`: Declares a local variable `f` of type `float`.
-
-### Variable Initialization
-
-- `a = 10;`: Initializes the local variable `a` with the value 10.
-
-- `b = 20;`: Initializes the local variable `b` with the value 20.
-
-### Arithmetic Operations
-
-- `c = a + b;`: Calculates the sum of `a` and `b` and assigns it to the local variable `c`.
-
-### Printing Results
-
-- `printf("value of c : %d \n", c);`: Prints the value of `c` using the `%d` format specifier.
-
-- `f = 70.0 / 3.0;`: Calculates the result of the floating-point division and assigns it to the local variable `f`.
-
-- `printf("value of f : %f \n", f);`: Prints the value of `f` using the `%f` format specifier.
+- Examples:
+```c
+int d = 3, f = 5;           // definition and initializing d and f. 
+char x = 'x';               // the variable x has the value 'x'.
+```
 
 ## Code
 
@@ -468,6 +275,7 @@ Within the `main` function, local variables are defined:
 #include <stdio.h>
 
 // Variable declaration:
+// You will use the keyword extern to declare a variable at any place.
 extern int a, b;
 extern int c;
 extern float f;
@@ -497,50 +305,334 @@ int main () {
 
 ![Understanding Variables Program Output](./ProgramFile/5_Program/UnderstandingVariables_Output.png)
 
+
+# 💻 Program 6
+
+## Objective
+**Write a Program expalaining the working of Constants in C Language**
+
+## Theory
+
+### Constants
+Constants refer to fixed values that the program may not alter during its execution. These fixed values are also called literals.
+
+Constants can be of any of the basic data types like an integer constant, a floating constant, a character constant, or a string literal. There are enumeration constants as well.
+
+#### Integer Literals
+An integer literal can be a decimal, octal, or hexadecimal constant. 
+
+Following are other examples of various types of integer literals −
+```
+85         /* decimal */
+0213       /* octal */
+0x4b       /* hexadecimal */
+```
+
+#### Floating-point Literals
+A floating-point literal has an integer part, a decimal point, a fractional part, and an exponent part. You can represent floating point literals either in decimal form or exponential form.
+
+Here are some examples of floating-point literals −
+
+```
+3.14159       /* Legal */
+314159E-5L    /* Legal */
+```
+
+#### Character Constants Literals
+Character literals are enclosed in single quotes, e.g., 'x' can be stored in a simple variable of char type.
+
+A character literal can be a plain character (e.g., 'x'), an escape sequence (e.g., '\t'), or a universal character (e.g., '\u02C0').
+
+#### Sting Literals
+String literals or constants are enclosed in double quotes "". A string contains characters that are similar to character literals: plain characters, escape sequences, and universal characters.
+
+Here is a example of string literals. The two forms are identical strings.
+```
+"hello, dear"
+
+"hello, " "d" "ear"
+```
+
+### Defining Constants
+There are two simple ways in C to define constants −
+- Using `#define` preprocessor.
+- Using `const` keyword.
+
+#### The #define Preprocessor
+Given below is the form to use #define preprocessor to define a constant −
+```
+#define identifier value
+```
+
+#### The const Keyword
+You can use const prefix to declare constants with a specific type as follows −
+```
+const type variable = value;
+```
+
+
+## Code
+
+```c
+#include <stdio.h>
+
+#define NEWLINE '\n'
+
+int main() {
+   const int  LENGTH = 10;
+   const int  WIDTH = 5;
+   int area;  
+   
+   area = LENGTH * WIDTH;
+   printf("value of area : %d", area);
+   printf("%c", NEWLINE);
+
+   return 0;
+}
+```
+
+## Output
+
+![Constants Program Output](./ProgramFile/6_Program/Prog_6.png)
+
+
 # 💻 Program 7
 
 ## Objective
 
-**Understanding Decision Making Statement if**
-
-## Software Requirements
-
-**`Windows 11, VS Code`**
+**Write a program to demostrate working of different Operators in C Language**
 
 ## Theory
 
-### if Statement Syntax
+### C-Operators
+An operator is a symbol that tells the compiler to perform specific mathematical or logical functions. C language provides the following types of operators −
+- Arithmetic Operators
+- Relational Operators
+- Logical Operators
+- Bitwise Operators
+- Assignment Operators
+- Misc Operators
+
+#### Arithmatic Operators
+The following table shows all the arithmetic operators supported by the C language. Assume variable A holds 10 and variable B holds 20 then −
+
+| Operator | Description                                                  | Example     |
+| -------: | ------------------------------------------------------------ | ----------- |
+|      `+` | Adds two operands.                                           | A + B = 30  |
+|      `-` | Subtracts second operand from the first.                     | A − B = -10 |
+|      `*` | Multiplies both operands.                                    | A * B = 200 |
+|      `/` | Divides numerator by de-numerator.                           | B / A = 2   |
+|      `%` | Gives remainder after an integer division.                   | B % A = 0   |
+|      `++`| Increases the integer value by one.                          | A++ = 11    |
+|      `--`| Decreases the integer value by one.                          | A++ = 11    |
+
+#### Relational Operators
+The following table shows all the relational operators supported by C. Assume variable A holds 10 and variable B holds 20 then −
+
+| Operator | Description               | Example    |
+| -------: | ------------------------- | ---------- |
+|     `==` | Equal to                  | (A == B) is not true. |
+|     `!=` | Not Equal to              | (A != B) is true. |
+|      `>` | Greater than              | (A > B) is not true. |
+|      `<` | Less than                 | (A < B) is true.   |
+|     `>=` | Greater than equal to     | (A >= B) is not true. |
+|      `<=`| Less than equal to        | (A <= B) is true. |
+
+#### Logical Operators
+The following table shows all the arithmetic operators supported by the C language. Assume variable A holds 10 and variable B holds 20 then −
+
+| Operator | Description                                  | Example            |
+| -------: | -------------------------------------------- | ------------------ |
+|    `&&`  | Logical AND: True only if both non-zero     | (A && B) is false. |
+|   `\|\|` | Logical OR: True if either non-zero          | (A \|\| B) is true. |
+|     `!`  | Logical NOT: Reverses operand's logic state  | !(A && B) is true. |
+
+
+#### Bitwise Operators
+Bitwise operator works on bits and perform bit-by-bit operation. The truth tables for &, |, and ^ is as follows −
+|  p  |  q  |p & q| p \| q | p ^ q  |
+| :-: | :-: | :-: | :----: | :----: |
+| 0   |  0  |  0  |    0   |    0   |
+| 0   |  1  |  0  |    1   |    1   |
+| 1   |  1  |  1  |    1   |    0   |
+| 1   |  0  |  0  |    1   |    1   |
+
+The following table lists the bitwise operators supported by C. Assume variable 'A' holds 60 and variable 'B' holds 13, then −
+
+| Operator | Description                                      | Example         |
+| -------: | ----------------------------------------------- | --------------- |
+|      `&` | Binary AND: Returns 1 if both bits are 1        | (A & B) = 12    |
+|     `\|` | Binary OR: Returns 1 if any bit is 1            | (A \| B) = 61   |
+|      `^` | Binary XOR: Copies if set in one but not both  | (A ^ B) = 49    |
+|      `~` | Unary One's Complement: Flips bits              | (~A) = -60      |
+|     `<<` | Left Shift: Shifts left by right operand bits   | A << 2 = 240    |
+|     `>>` | Right Shift: Shifts right by right operand bits | A >> 2 = 15     |
+
+
+
+#### Assignment Operators
+
+| Operator | Description                                         | Example                                  |
+| -------: | --------------------------------------------------- | ---------------------------------------- |
+|      `=` | Simple assignment: Assigns right to left operand    | C = A + B assigns A + B to C             |
+|     `+=` | Add AND assignment: Adds right to left and assigns  | C += A is like C = C + A                 |
+|     `-=` | Subtract AND assignment: Subtracts and assigns      | C -= A is like C = C - A                 |
+|     `*=` | Multiply AND assignment: Multiplies and assigns     | C *= A is like C = C * A                 |
+|     `/=` | Divide AND assignment: Divides and assigns          | C /= A is like C = C / A                 |
+|     `%=` | Modulus AND assignment: Takes modulus and assigns   | C %= A is like C = C % A                 |
+|    `<<=` | Left shift AND assignment: Left shift and assigns   | C <<= 2 is like C = C << 2               |
+|    `>>=` | Right shift AND assignment: Right shift and assigns | C >>= 2 is like C = C >> 2               |
+|     `&=` | Bitwise AND assignment: Bitwise AND and assigns     | C &= 2 is like C = C & 2                 |
+|     `^=` | Bitwise XOR assignment: Bitwise XOR and assigns     | C ^= 2 is like C = C ^ 2                 |
+|    `\|=` | Bitwise OR assignment: Bitwise OR and assigns       | C \|= 2 is like C = C \| 2               |
+
+
+#### Misc Operators ↦ sizeof & ternary
+Besides the operators discussed above, there are a few other important operators including sizeof and ? : supported by the C Language.
+
+| Operator   | Description                                   | Example                                               |
+| ---------: | --------------------------------------------- | ----------------------------------------------------- |
+| `sizeof()` | Returns size of variable                      | `sizeof(a)` for `a` as integer returns 4              |
+|      `&`   | Returns address of variable                   | `&a` returns the actual address of the variable       |
+|      `*`   | Pointer to variable                           | `*a` returns the value at the address stored in `a`   |
+|      `?:`  | Conditional (Ternary) Operator                | `Condition ? X : Y` returns `X` if true, `Y` otherwise|
+
+## Code
+
+```c
+#include <stdio.h>
+
+int main() {
+
+    unsigned int a = 21;
+    unsigned int b = 10;
+    int c;
+   
+    printf("Arithmatic Operators:\n");
+    printf("a + b: %d\n", a + b );	
+    printf("a - b: %d\n", a - b );
+    printf("a * b: %d\n", a * b );
+    printf("a / b: %d\n", a / b );
+    printf("a % b: %d\n", a % b );
+    printf("++a: %d\n", ++a );
+    printf("--a: %d\n", --a );
+
+
+    printf("\nRelational Operators:\n");
+    printf("a == b: %d\n", a == b); // 0 (false)
+    printf("a != b: %d\n", a != b); // 1 (true)
+    printf("a > b: %d\n", a > b);   // 0 (false)
+    printf("a < b: %d\n", a < b);   // 1 (true)
+    printf("a >= b: %d\n", a >= b); // 0 (false)
+    printf("a <= b: %d\n", a <= b); // 1 (true)
+   
+
+    printf("\nLogical Operators:\n");
+    printf("a && b: %d\n", a && b);
+    printf("a || b: %d\n", a || b);
+    printf("!a    : %d\n", !a);
+
+
+    a = 60;
+    b = 13;
+
+    printf("\nBitwise Operators:\n");
+    printf("a & b  : %d\n", a & b);
+    printf("a | b  : %d\n", a | b);
+    printf("a ^ b  : %d\n", a ^ b);
+    printf("~a    : %d\n", ~a);
+    printf("a << 2: %d\n", a << 2);
+    printf("a >> 1: %d\n", a >> 1);
+
+
+    a = 21;
+
+    printf("\nAssignment Operators:\n");
+    c = a;
+    printf("c = a: %d\n", c);
+    c += a;
+    printf("c += a: %d\n", c);
+    c -= a;
+    printf("c -= a: %d\n", c);
+    c *= a;
+    printf("c *= a: %d\n", c);
+    c /= a;
+    printf("c /= a: %d\n", c);
+    c = 200;
+    c %= a;
+    printf("c %%= a: %d\n", c);
+    c <<=  2;
+    printf("c <<= 2: %d\n", c );
+    c >>=  2;
+    printf("c >>= 2: %d\n", c );
+    c &=  2;
+    printf("c &= 2: %d\n", c );
+    c ^=  2;
+    printf("c ^= 2: %d\n", c );
+    c |=  2;
+    printf("c |= 2: %d\n", c );
+
+
+    printf("\nMiscellaneous Operators:\n");
+    printf("sizeof(int): %lu bytes\n", sizeof(int)); // Sizeof operator
+    int x = 42;
+    int *ptr = &x; // Address-of operator
+    printf("Address of x: %p\n", ptr);
+
+    return 0;
+}
+```
+
+## Output
+
+![Operators Program Output A](./ProgramFile/7_Program/Prog_7a.png)
+![Operators Program Output B](./ProgramFile/7_Program/Prog_7b.png)
+
+
+# 💻 Program 8
+
+## Objective
+
+**Write a program to demostrate working of if statement in C Programming**
+
+## Theory
+
+### C - Decision Making
+![Chart of Conditional Statements in C](./ProgramFile/8_Program/ConditionalStatementsinC.png)
+
+Decision-making structures in programming involve evaluating conditions and executing specific statements based on whether the condition is true or false.
+
+Show below is the general form of a typical decision making structure found in most of the programming languages −
+
+![Figure of General form of a Decision making statement](./ProgramFile/8_Program/decision_making.jpg)
+
+
+Following are the decision-making statements available in C:
+
+- if Statement
+- if-else Statement
+- Nested if Statement
+- if-else-if Ladder
+- switch Statement
+- Conditional Operator
+- Jump Statements: 
+   - break
+   - continue
+   - goto
+   - return
+
+### if Statement:
+
+An if statement consists of a boolean expression followed by one or more statements.
+
+
+#### if Statement Syntax
 
 ```
 if(boolean_expression) {
    /* statement(s) will execute if the boolean expression is true */
 }
 ```
-
-### if Statement:
-
-An if statement consists of a boolean expression followed by one or more statements.
-
-- `if(a<20){}`: This line checks if the number entered by the user is within the specified range. If it is, the program will execute the code inside the curly braces.
-
-### Format Specifier Used
-
-| Format Specifier | Description                                                                                                                                                                |
-| ---------------: | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-|             `%d` | We can use the signed integer format specifier %d in the scanf() and print() functions or other functions that use formatted string for input and output of int data type. |
-
-### Relational Operator Used
-
-| Operator | Description                                                                                                           |
-| -------: | --------------------------------------------------------------------------------------------------------------------- |
-|      `<` | Checks if the value of left operand is less than the value of right operand. If yes, then the condition becomes true. |
-
-### Misc Operator Used
-
-| Operator | Description                                                                                                           |
-| -------: | --------------------------------------------------------------------------------------------------------------------- |
-|      `&` | Returns the address of a variable.                                                                                    |
-
 
 ## Code
 
@@ -549,8 +641,6 @@ An if statement consists of a boolean expression followed by one or more stateme
 #include <stdio.h>
 
 int main () {
-
-   /* local variable definition */
    int a = 10;
 
    /* check the boolean condition using if statement */
@@ -583,20 +673,20 @@ int main(){
 
 ## Output
 
-![Understanding if Program Output Tutorialspoint](./ProgramFile/6_Program/OnlyifProgram_output1.png)
-![Understanding if Program Output LetusC](./ProgramFile/6_Program/OnlyifProgram_output2.png)
+![Understanding if Program Output Tutorialspoint](./ProgramFile/8_Program/OnlyifProgram_output1.png)
+![Understanding if Program Output LetusC](./ProgramFile/8_Program/OnlyifProgram_output2.png)
 
-# 💻 Program 8
+# 💻 Program 9
 
 ## Objective
 
-**Understanding Decision Making Statement if-else**
-
-## Software Requirements
-
-**`Windows 11, VS Code`**
+**Write a program to demostrate working of if-else statement in C Programming**
 
 ## Theory
+
+### if-else Statement:
+
+An if statement can be followed by an optional else statement, which executes when the Boolean expression is false.
 
 ### if-else Statement Syntax
 
@@ -607,10 +697,6 @@ if(boolean_expression) {
    /* statement(s) will execute if the boolean expression is false */
 }
 ```
-
-### if-else Statement:
-
-An if statement can be followed by an optional else statement, which executes when the Boolean expression is false.
 
 ## Code
 
@@ -665,19 +751,20 @@ int main()
 
 ## Output
 
-![Understanding if-else Program Output Tutorialspoint](./ProgramFile/7_Program/ifelse_Program_output2.png)
-![Understanding if-else Program Output LetusC](./ProgramFile/7_Program/ifelse_Program_output1.png)
+![Understanding if-else Program Output Tutorialspoint](./ProgramFile/9_Program/ifelse_Program_output2.png)
+![Understanding if-else Program Output LetusC](./ProgramFile/9_Program/ifelse_Program_output1.png)
 
-# Program 9
+# 💻 Program 10
+
 ## Objective
-**Understanding Decision Statement nested if**
+**Write a program to demostrate working of nested if statement in C Programming**
 
-
-## Software Requirements
-**`Windows 11, VS Code`**
 
 
 ## Theory
+
+### nested if Statement:
+You can use one if or else if statement inside another if or else if statement(s).
 
 ### nested if Statement Syntax
 ```
@@ -690,16 +777,8 @@ if( boolean_expression 1) {
 }
 ```
 
-### nested if Statement:
-You can use one if or else if statement inside another if or else if statement(s).
-
-### Relational Operator Used
-
-| Operator | Description                                                                              |
-| -------: | ---------------------------------------------------------------------------------------- |
-|     `==` | Checks if the values of two operands are equal or not. If yes, then the condition becomes true. |
-
 ## Code
+
 ```c
 // TutorialsPoint Program
 #include <stdio.h>
@@ -750,18 +829,24 @@ int main( )
 ```
 
 ## Output
-![Understanding Nested-if Program Output](./ProgramFile/8_Program/Prog8_Outpur.png)
+![Understanding Nested-if Program Output](./ProgramFile/10_Program/Prog8_Outpur.png)
 
-# Program 10
+# Program 11
 ## Objective
-**Understanding while Loop in C**
-
-
-## Software Requirements
-**`Windows 11, VS Code`**
+**Write a program to demostrate working of while Loop in C Programming**
 
 
 ## Theory
+
+### C - Loops
+![Chart of Loops in C](./ProgramFile/11_Program/LoopsinC.png)
+
+A loop statement allows us to execute a statement or group of statements multiple times. Given below is the general form of a loop statement in most of the programming languages −
+
+![Loop Architechture](./ProgramFile/11_Program/loop_architecture.jpg)
+
+### While Loop:
+Repeats a statement or group of statements while a given condition is true. It tests the condition before executing the loop body.
 
 ### While Loop Syntax
 ```
@@ -769,21 +854,6 @@ while(condition) {
    statement(s);
 }
 ```
-
-### While Loop:
-Repeats a statement or group of statements while a given condition is true. It tests the condition before executing the loop body.
-
-### Relational Operator Used
-
-| Operator | Description                                                                              |
-| -------: | ---------------------------------------------------------------------------------------- |
-|     `<=` | Checks if the value of left operand is less than or equal to the value of right operand. If yes, then the condition becomes true. |
-
-### Arithmetic Operator Used
-
-| Operator | Description                                                                              |
-| -------: | ---------------------------------------------------------------------------------------- |
-|     `++` | Increment operator increases the integer value by one. |
 
 ## Code
 ```c
@@ -824,18 +894,16 @@ int main( )
 ```
 
 ## Output
-![Understanding while Program Output](./ProgramFile/9_Program/Prog9_Outpur.png)
+![Understanding while Program Output](./ProgramFile/11_Program/Prog9_Outpur.png)
 
-# Program 11
+# Program 12
 ## Objective
-**Understanding do...while Loop in C**
-
-
-## Software Requirements
-**`Windows 11, VS Code`**
-
+**Write a program to demostrate working of do...while Loop in C Programming**
 
 ## Theory
+
+### do...while Loop:
+It is more like a while statement, except that it tests the condition at the end of the loop body.
 
 ### do..while Loop Syntax
 ```
@@ -843,10 +911,6 @@ do {
    statement(s);
 } while( condition );
 ```
-
-### do...while Loop:
-It is more like a while statement, except that it tests the condition at the end of the loop body.
-
 
 ## Code
 ```c
@@ -882,4 +946,4 @@ int main()
 ```
 
 ## Output
-![Understanding do...while Program Output](./ProgramFile/10_Program/Prog10_Outpur.png)
+![Understanding do...while Program Output](./ProgramFile/12_Program/Prog10_Outpur.png)

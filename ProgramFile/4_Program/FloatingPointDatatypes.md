@@ -1,41 +1,22 @@
-# Program 4
+# 💻 Program 4
+
 ## Objective
-**Understanding Floating Point Datatypes**
 
-
-## Software Requirements
-**`Windows 11, Github Codespaces, Chrome(or other browser for using CodeSpaces)`**
-
+**Write a program to provides the details of standard floating-point types in C Language**
 
 ## Theory
-### Storage Size
 
-- `sizeof(Data_Type)`: Calculates the storage space in bytes of provided datatype.
-
-### Floating-Point Limits
-
-The following `printf` statements provide information about the limits of floating-point data types:
-
-- `FLT_MAX`: Prints the maximum positive finite value representable by a `float`.
-
-- `FLT_MIN`: Prints the minimum positive finite value representable by a `float`.
-
-- `-FLT_MAX`: Prints the maximum negative finite value representable by a `float`.
-
-- `-FLT_MIN`: Prints the minimum negative finite value representable by a `float`.
-
-- `DBL_MAX`: Prints the maximum positive finite value representable by a `double`.
-
-- `DBL_MIN`: Prints the minimum positive finite value representable by a `double`.
-
-- `-DBL_MAX`: Prints the maximum negative finite value representable by a `double`.
-
-### Precision
-
-- `printf("Precision value: %d\n", FLT_DIG);`: Prints the number of decimal digits of precision for the `float` data type.
+### Floating-Point Types
+The following table provide the details of standard floating-point types -
+|   Type       | Storage size |       Value range         | Precision         |
+| :----------- | :----------: | :-----------------------: | :----------------: |
+| float        |    4 bytes   | 1.2E-38 to 3.4E+38       | 6 decimal places   |
+| double       |    8 bytes   | 2.3E-308 to 1.7E+308     | 15 decimal places  |
+| long double  |   10 bytes   | 3.4E-4932 to 1.1E+4932   | 19 decimal places  |
 
 
 ## Code
+
 ```c
 #include <stdio.h>
 #include <stdlib.h>
@@ -45,14 +26,19 @@ The following `printf` statements provide information about the limits of floati
 int main() {
 
     printf("Storage size for float : %lu \n", sizeof(float));
-    printf("FLT_MAX     :   %g\n", (float) FLT_MAX);
-    printf("FLT_MIN     :   %g\n", (float) FLT_MIN);
-    printf("-FLT_MAX    :   %g\n", (float) -FLT_MAX);
-    printf("-FLT_MIN    :   %g\n", (float) -FLT_MIN);
-    printf("DBL_MAX     :   %g\n", (double) DBL_MAX);
-    printf("DBL_MIN     :   %g\n", (double) DBL_MIN);
-    printf("-DBL_MAX     :  %g\n", (double) -DBL_MAX);
-    printf("Precision value: %d\n", FLT_DIG );
+    // sizeof(Data_Type): Calculates the storage space in bytes of the provided data type.
+
+    printf("FLT_MAX: %g\n", (float) FLT_MAX);
+    // %g: Format specifier for a general floating-point number.
+    printf("FLT_MIN: %g\n", (float) FLT_MIN);
+    printf("-FLT_MAX: %g\n", (float) -FLT_MAX);
+    printf("-FLT_MIN: %g\n", (float) -FLT_MIN);
+    printf("Double Max: %g\n", (double) DBL_MAX);
+    printf("Double Min: %g\n", (double) DBL_MIN);
+    printf("-Double Max: %g\n", (double) -DBL_MAX);
+
+    printf("Float Precision: %d decimal places\n", FLT_DIG);
+    // Decimal digits of precision for float.
 
     return 0;
 }

@@ -1,7 +1,9 @@
+// Hello World Program in C language
+
 #include <stdio.h>
 
 int main(void){
-    // First Program of my Practical File 
     printf("Hello World!\n");
+    // \n -> Inserts a newline.
     return 0;
 }

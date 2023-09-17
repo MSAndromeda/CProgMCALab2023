@@ -1,13 +1,11 @@
-# Program 10
+# Program 12
 ## Objective
-**Understanding do...while Loop in C**
-
-
-## Software Requirements
-**`Windows 11, Github Codespaces, Chrome(or other browser for using CodeSpaces)`**
-
+**Write a program to demostrate working of do...while Loop in C Programming**
 
 ## Theory
+
+### do...while Loop:
+It is more like a while statement, except that it tests the condition at the end of the loop body.
 
 ### do..while Loop Syntax
 ```
@@ -15,10 +13,6 @@ do {
    statement(s);
 } while( condition );
 ```
-
-### do...while Loop:
-It is more like a while statement, except that it tests the condition at the end of the loop body.
-
 
 ## Code
 ```c

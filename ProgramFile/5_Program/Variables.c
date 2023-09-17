@@ -1,6 +1,7 @@
 #include <stdio.h>
 
 // Variable declaration:
+// You will use the keyword extern to declare a variable at any place.
 extern int a, b;
 extern int c;
 extern float f;

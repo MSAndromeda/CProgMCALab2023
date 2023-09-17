@@ -2,7 +2,6 @@
 
 int main( )
 {
-
     int p, n ;
     float r, si ;
 
@@ -12,7 +11,9 @@ int main( )
 
     /* formula for simple interest */
     si = p * n * r / 100 ;
+    
     printf ( "Simple Interest = %f\n" , si ) ;
+   /* %f for float data type in formatted strings. */
 
     return 0;
 }
