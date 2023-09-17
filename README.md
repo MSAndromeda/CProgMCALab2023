@@ -831,7 +831,7 @@ int main( )
 ## Output
 ![Understanding Nested-if Program Output](./ProgramFile/10_Program/Prog8_Outpur.png)
 
-# Program 11
+# 💻 Program 11
 ## Objective
 **Write a program to demostrate working of while Loop in C Programming**
 
@@ -896,7 +896,7 @@ int main( )
 ## Output
 ![Understanding while Program Output](./ProgramFile/11_Program/Prog9_Outpur.png)
 
-# Program 12
+# 💻 Program 12
 ## Objective
 **Write a program to demostrate working of do...while Loop in C Programming**
 
@@ -947,3 +947,322 @@ int main()
 
 ## Output
 ![Understanding do...while Program Output](./ProgramFile/12_Program/Prog10_Outpur.png)
+
+
+# 💻 Program 13
+## Objective
+**Write a matrix program to demostrate working of for Loop in C Programming**
+
+## Theory
+
+### for Loop:
+Executes a sequence of statements multiple times and abbreviates the code that manages the loop variable.
+
+### for Loop Syntax
+```
+for ( init; condition; increment ) {
+   statement(s);
+}
+```
+
+## Code
+```c
+// For Loop Matrix Program
+#include <stdio.h>
+
+int main() {
+    int rows, cols;
+
+    // Input the dimensions of the matrices
+    printf("Enter the number of rows: ");
+    scanf("%d", &rows);
+    printf("Enter the number of columns: ");
+    scanf("%d", &cols);
+
+    // Initialize matrices A and B
+    int A[rows][cols];
+    int B[rows][cols];
+
+    // Input elements for matrix A
+    printf("Enter elements for matrix A:\n");
+    for (int i = 0; i < rows; i++) {
+        for (int j = 0; j < cols; j++) {
+            printf("A[%d][%d]: ", i, j);
+            scanf("%d", &A[i][j]);
+        }
+    }
+
+    // Input elements for matrix B
+    printf("Enter elements for matrix B:\n");
+    for (int i = 0; i < rows; i++) {
+        for (int j = 0; j < cols; j++) {
+            printf("B[%d][%d]: ", i, j);
+            scanf("%d", &B[i][j]);
+        }
+    }
+
+    // Addition of matrices A and B
+    int sum[rows][cols];
+    for (int i = 0; i < rows; i++) {
+        for (int j = 0; j < cols; j++) {
+            sum[i][j] = A[i][j] + B[i][j];
+        }
+    }
+
+    // Subtraction of matrices A and B
+    int difference[rows][cols];
+    for (int i = 0; i < rows; i++) {
+        for (int j = 0; j < cols; j++) {
+            difference[i][j] = A[i][j] - B[i][j];
+        }
+    }
+
+    // Multiplication of matrices A and B
+    int product[rows][cols];
+    if (cols == rows) {
+        for (int i = 0; i < rows; i++) {
+            for (int j = 0; j < cols; j++) {
+                product[i][j] = 0;
+                for (int k = 0; k < cols; k++) {
+                    product[i][j] += A[i][k] * B[k][j];
+                }
+            }
+        }
+    } else {
+        printf("Matrix multiplication is not possible because the number of columns in A is not equal to the number of rows in B.\n");
+    }
+
+    // Display results
+    printf("\nMatrix A:\n");
+    for (int i = 0; i < rows; i++) {
+        for (int j = 0; j < cols; j++) {
+            printf("%d\t", A[i][j]);
+            // \t -> Inserts a tab in the text at this point.
+        }
+        printf("\n");
+    }
+
+    printf("\nMatrix B:\n");
+    for (int i = 0; i < rows; i++) {
+        for (int j = 0; j < cols; j++) {
+            printf("%d\t", B[i][j]);
+        }
+        printf("\n");
+    }
+
+    printf("\nMatrix A + B:\n");
+    for (int i = 0; i < rows; i++) {
+        for (int j = 0; j < cols; j++) {
+            printf("%d\t", sum[i][j]);
+        }
+        printf("\n");
+    }
+
+    printf("\nMatrix A - B:\n");
+    for (int i = 0; i < rows; i++) {
+        for (int j = 0; j < cols; j++) {
+            printf("%d\t", difference[i][j]);
+        }
+        printf("\n");
+    }
+
+    if (cols == rows) {
+        printf("\nMatrix A * B:\n");
+        for (int i = 0; i < rows; i++) {
+            for (int j = 0; j < cols; j++) {
+                printf("%d\t", product[i][j]);
+            }
+            printf("\n");
+        }
+    }else{
+        printf("The Multiplication of Given matrices is not possible");
+    }
+
+    return 0;
+}
+
+```
+
+## Output
+![Understanding for Program Output](./ProgramFile/13_Program/Prog13_Output.png)
+
+# 💻 Program 14
+## Objective
+**Write a program to print different patterns using for Loop in C Programming**
+
+## Code
+```c
+#include <stdio.h>
+
+int main() {
+    int n = 5;
+
+    printf("Right Triangle Pattern:\n");
+    for (int i = 0; i < n; i++) {
+        for (int j = 0; j <= i; j++) {
+            printf("* ");
+        }
+        printf("\n");
+    }
+
+    printf("\nLeft Triangle Pattern:\n");
+	for (int i = 0; i < n; i++) {
+		for (int j = 0; j < 2 * (n - i) - 1; j++) {
+			printf(" ");
+		}
+		for (int k = 0; k <= i; k++) {
+			printf("* ");
+		}
+		printf("\n");
+	}
+
+    printf("\nInverted Right Triangle Pattern:\n");
+        for (int i = n; i > 0; i--) {
+        for (int j = 0; j < i; j++) {
+            printf("* ");
+        }
+        printf("\n");
+    }
+
+    printf("\nPyramid Pattern:\n");
+        for (int i = 1; i <= n; i++) {
+        for (int j = 1; j <= n - i; j++) {
+            printf(" ");
+        }
+        for (int k = 1; k <= 2 * i - 1; k++) {
+            printf("*");
+        }
+        printf("\n");
+    }
+
+    printf("\nDiamond Pattern:\n");
+        for (int i = 0; i < n; i++) {
+        for (int j = 0; j < n - i; j++) {
+            printf("  ");
+        }
+        for (int k = 0; k < 2 * i + 1; k++) {
+            printf("* ");
+        }
+        printf("\n");
+    }
+    for (int i = n - 2; i >= 0; i--) {
+        for (int j = 0; j < n - i; j++) {
+            printf("  ");
+        }
+        for (int k = 0; k < 2 * i + 1; k++) {
+            printf("* ");
+        }
+        printf("\n");
+    }
+
+    return 0;
+}
+```
+
+## Output
+![Understanding For Program Output](./ProgramFile/14_Program/Prog14_Output.png)
+
+
+
+# 💻 Program 15
+## Objective
+**Write a program to demostrate Working of Switch case in C Programming**
+
+## Theory
+
+### Switch Statement
+A switch statement allows a variable to be tested for equality against a list of values.
+
+#### Syntax
+```
+switch(expression) {
+
+   case constant-expression  :
+      statement(s);
+      break; /* optional */
+	
+   case constant-expression  :
+      statement(s);
+      break; /* optional */
+  
+   /* you can have any number of case statements */
+   default : /* Optional */
+   statement(s);
+}
+```
+
+### break statement
+Terminates the loop or switch statement and transfers execution to the statement immediately following the loop or switch.
+
+#### Syntax
+```
+break;
+```
+
+### continue statement
+Causes the loop to skip the remainder of its body and immediately retest its condition prior to reiterating.
+
+#### Syntax
+```
+continue;
+```
+
+## Code
+```c
+// Program from Let us C
+#include <stdio.h>
+
+int main( ) 
+{ 
+    int i = 2 ; 
+    switch ( i ) 
+    { 
+        case 1 : 
+            printf ( "I am in case 1 \n" ) ; 
+            break ; 
+        case 2 : 
+            printf ( "I am in case 2 \n" ) ; 
+            break ; 
+        case 3 : 
+            printf ( "I am in case 3 \n" ) ; 
+            break ; 
+        default : 
+            printf ( "I am in default \n" ) ; 
+    }
+    return 0;
+}
+
+// Program from Tutorials Point
+#include <stdio.h>
+ 
+int main () {
+
+   /* local variable definition */
+   char grade = 'B';
+
+   switch(grade) {
+      case 'A' :
+         printf("Excellent!\n" );
+         break;
+      case 'B' :
+      case 'C' :
+         printf("Well done\n" );
+         break;
+      case 'D' :
+         printf("You passed\n" );
+         break;
+      case 'F' :
+         printf("Better try again\n" );
+         break;
+      default :
+         printf("Invalid grade\n" );
+   }
+   
+   printf("Your grade is %c\n", grade );
+ 
+   return 0;
+}
+```
+
+## Output
+![Understanding For Program Output](./ProgramFile/15_Program/Prog15_Output.png)
