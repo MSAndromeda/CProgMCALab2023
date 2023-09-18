@@ -68,6 +68,10 @@ int main(void){
 
 **Write a program to Calculate Simple Interest of A Investment in C Language**
 
+## Software Requirements
+
+**`Windows 11, VS Code`**
+
 ## Theory
 
 ### Datatypes in C
@@ -119,6 +123,10 @@ int main( )
 ## Objective
 
 **Write a program to provides the details of standard integer types in C Language**
+
+## Software Requirements
+
+**`Windows 11, VS Code`**
 
 ## Theory
 
@@ -190,6 +198,10 @@ int main() {
 
 **Write a program to provides the details of standard floating-point types in C Language**
 
+## Software Requirements
+
+**`Windows 11, VS Code`**
+
 ## Theory
 
 ### Floating-Point Types
@@ -239,6 +251,10 @@ int main() {
 ## Objective
 
 **Write a Program to demostrate the working of Variables in C Language**
+
+## Software Requirements
+
+**`Windows 11, VS Code`**
 
 ## Theory
 
@@ -310,6 +326,10 @@ int main () {
 
 ## Objective
 **Write a Program expalaining the working of Constants in C Language**
+
+## Software Requirements
+
+**`Windows 11, VS Code`**
 
 ## Theory
 
@@ -401,6 +421,10 @@ int main() {
 ## Objective
 
 **Write a program to demostrate working of different Operators in C Language**
+
+## Software Requirements
+
+**`Windows 11, VS Code`**
 
 ## Theory
 
@@ -595,6 +619,10 @@ int main() {
 
 **Write a program to demostrate working of if statement in C Programming**
 
+## Software Requirements
+
+**`Windows 11, VS Code`**
+
 ## Theory
 
 ### C - Decision Making
@@ -682,6 +710,10 @@ int main(){
 
 **Write a program to demostrate working of if-else statement in C Programming**
 
+## Software Requirements
+
+**`Windows 11, VS Code`**
+
 ## Theory
 
 ### if-else Statement:
@@ -759,7 +791,9 @@ int main()
 ## Objective
 **Write a program to demostrate working of nested if statement in C Programming**
 
+## Software Requirements
 
+**`Windows 11, VS Code`**
 
 ## Theory
 
@@ -835,6 +869,9 @@ int main( )
 ## Objective
 **Write a program to demostrate working of while Loop in C Programming**
 
+## Software Requirements
+
+**`Windows 11, VS Code`**
 
 ## Theory
 
@@ -900,6 +937,10 @@ int main( )
 ## Objective
 **Write a program to demostrate working of do...while Loop in C Programming**
 
+## Software Requirements
+
+**`Windows 11, VS Code`**
+
 ## Theory
 
 ### do...while Loop:
@@ -952,6 +993,10 @@ int main()
 # 💻 Program 13
 ## Objective
 **Write a matrix program to demostrate working of for Loop in C Programming**
+
+## Software Requirements
+
+**`Windows 11, VS Code`**
 
 ## Theory
 
@@ -1090,6 +1135,10 @@ int main() {
 ## Objective
 **Write a program to print different patterns using for Loop in C Programming**
 
+## Software Requirements
+
+**`Windows 11, VS Code`**
+
 ## Code
 ```c
 #include <stdio.h>
@@ -1167,6 +1216,10 @@ int main() {
 # 💻 Program 15
 ## Objective
 **Write a program to demostrate Working of Switch case in C Programming**
+
+## Software Requirements
+
+**`Windows 11, VS Code`**
 
 ## Theory
 
