@@ -448,7 +448,7 @@ The following table shows all the arithmetic operators supported by the C langua
 |      `/` | Divides numerator by de-numerator.                           | B / A = 2   |
 |      `%` | Gives remainder after an integer division.                   | B % A = 0   |
 |      `++`| Increases the integer value by one.                          | A++ = 11    |
-|      `--`| Decreases the integer value by one.                          | A++ = 11    |
+|      `--`| Decreases the integer value by one.                          | A-- = 9     |
 
 #### Relational Operators
 The following table shows all the relational operators supported by C. Assume variable A holds 10 and variable B holds 20 then −
