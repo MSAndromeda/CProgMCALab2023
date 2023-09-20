@@ -100,4 +100,4 @@ int main () {
 ```
 
 ## Output
-![Understanding For Program Output](./Prog15_Output.png)
+![Switch Program Output](./Prog15_Output.png)

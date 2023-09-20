@@ -133,4 +133,4 @@ int main() {
 ```
 
 ## Output
-![Understanding For Program Output](./Prog13_Output.png)
+![Matrix Program Output](./Prog13_Output.png)
