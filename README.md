@@ -75,7 +75,8 @@ int main(void){
 ## Theory
 
 ### Datatypes in C
-![Datatypes in C Chart from GFG](./DatatypesInC.jpg)
+
+![Datatypes in C](./ProgramFile/2_Program/DatatypesInC.jpeg)
 
 #### Primitive Datatypes
 - Primitive data types are the most basic data types that are used for representing simple values such as integers, float, characters, etc.
